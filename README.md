@@ -12,15 +12,6 @@ Based on https://docs.rs/wasmtime/latest/wasmtime/component/bindgen_examples/_0_
 - `make build-module`
 - `make run-module`
 
-Error I get:
-> Error: component imports instance `wasi:cli/environment@0.2.0`, but a matching implementation was not found in the
-> linker
->
-> Caused by:
-> 0: instance export `get-environment` has the wrong type
-> 1: function implementation is missing
-
-
-Just to prove the module works run:
+### Run with Node
 
 - `make run-module-node`

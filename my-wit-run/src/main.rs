@@ -22,7 +22,7 @@ impl HelloWorldImports for MyState {
 fn main() -> wasmtime::Result<()> {
     // Compile the `Component` that is being run for the application.
     let engine = Engine::default();
-    let component = Component::from_file(&engine, "../my-wit-module/target/wasm32-wasip1/debug/my_wit_module.wasm")?;
+    let component = Component::from_file(&engine, "../my-wit-module/target/wasm32-unknown-unknown/debug/my_wit_module.wasm")?;
 
     // Instantiation of bindings always happens through a `Linker`.
     // Configuration of the linker is done through a generated `add_to_linker`
@@ -50,6 +50,7 @@ fn main() -> wasmtime::Result<()> {
 
     // Here our `greet` function doesn't take any parameters for the component,
     // but in the Wasmtime embedding API the first argument is always a `Store`.
-    bindings.call_greet(&mut store)?;
+    let res = bindings.call_greet(&mut store, "SMITH!")?;
+    println!("{}", res);
     Ok(())
 }

@@ -6,8 +6,8 @@ use bindings::Guest;
 struct Component;
 
 impl Guest for Component {
-    fn greet() {
-        println!("Hello, world!");
+    fn greet(name :String) -> String {
+        format!("Hello, {}!", name)
     }
 }
 
