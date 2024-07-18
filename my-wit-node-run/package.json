@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "node index.js",
+    "generate": "jco transpile ../my-wit-module/target/wasm32-wasip1/debug/my_wit_module.wasm --out-dir ./o"
+  },
+  "type": "module",
+  "dependencies": {
+    "@bytecodealliance/jco": "^1.3.1"
+  }
+}

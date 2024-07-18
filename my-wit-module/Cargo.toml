@@ -1,0 +1,12 @@
+[package]
+name = "my-wit-module"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasi = "0.13.1"
+wit-bindgen = "0.28.0"
+wit-bindgen-rt = "0.28.0"

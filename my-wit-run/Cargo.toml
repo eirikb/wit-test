@@ -1,0 +1,9 @@
+[package]
+name = "my-wit-run"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wasi = "0.13.1"
+wasmtime = "22.0.0"
+wit-bindgen = "0.28.0"
