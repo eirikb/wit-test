@@ -46,6 +46,6 @@ fn main() -> wasmtime::Result<()> {
 
     // Here our `greet` function doesn't take any parameters for the component,
     // but in the Wasmtime embedding API the first argument is always a `Store`.
-    bindings.call_greet(&mut store, "World!")?;
+    bindings.call_greet(&mut store)?;
     Ok(())
 }
