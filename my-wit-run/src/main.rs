@@ -1,4 +1,5 @@
 // Based on https://docs.rs/wasmtime/latest/wasmtime/component/bindgen_examples/_0_hello_world/index.html
+
 use wasmtime::component::*;
 use wasmtime::{Engine, Store};
 
@@ -10,6 +11,8 @@ struct MyState {
     name: String,
 }
 
+// Imports into the world, like the `name` import for this world, are
+// satisfied through traits.
 impl HelloWorldImports for MyState {
     fn name(&mut self) -> String {
         self.name.clone()
