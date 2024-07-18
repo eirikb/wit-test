@@ -1,3 +1,4 @@
+// Based on https://docs.rs/wasmtime/latest/wasmtime/component/bindgen_examples/_0_hello_world/index.html
 use wasmtime::component::*;
 use wasmtime::{Engine, Store};
 
